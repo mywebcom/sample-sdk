@@ -1,0 +1,43 @@
+{
+  "name": "agl-test",
+  "version": "0.0.1",
+  "description": "AGL Test Example",
+  "homepage": "",
+  "author": "Richard Cai <richard.cgang@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "AGL",
+    "RunAbove",
+    "API",
+    "REST",
+    "JsonAPI"
+  ],
+  "main": "./src/agls.es6.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "dependencies": {
+    "async": "0.9.x",
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "eslint": "latest",
+    "mocha": "latest",
+    "nock": "latest",
+    "chai": "latest"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/eslint src/agl.es6.js tests && npm run-script test-integration && npm run-script test-unit",
+    "test-unit": "node ./node_modules/.bin/mocha -g Proxy -i --reporter spec tests/*.js",
+    "test-integration": "node node_modules/.bin/mocha -g Proxy -i --reporter spec tests-integration/*.js",
+    "compile": "babel -w --presets es2015 src/agl.es6.js --out-file src/agl.es5.js",
+    "start": "node /home/node/app/index.js"
+  }
+}

@@ -1,0 +1,13 @@
+html
+  head
+    title= title
+  body
+    h3= 'Male'
+    ul
+        each cat in sortedMale
+            li= cat.name
+
+    h3= 'Female'
+    ul
+        each cat in sortedFemale
+            li= cat.name
