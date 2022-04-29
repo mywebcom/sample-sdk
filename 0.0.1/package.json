@@ -21,7 +21,7 @@
     "url": ""
   },
   "dependencies": {
-    "async": "0.9.x",
+    "async": "2.6.x",
     "express": "^4.17.1",
     "pug": "^2.0.4"
   },
